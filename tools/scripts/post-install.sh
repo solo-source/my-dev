@@ -4,15 +4,15 @@
 #!/bin/bash
 
 #Get the basic dependencies setup
-sudo dnf update
+sudo dnf update -y
 sudo dnf upgrade -y
 
 sudo dnf groupinstall "Development Tools" -y
 sudo dnf install curl vim gnome-tweaks git -y
 
 #install Volta(volta.sh)
-curl https://get.volta.sh | bash
-
+curl https://get.volta.sh | bash -y
+ 
 
 #install node using volta from the absolute pack
 $HOME/.volta/bin/volta install node@lts
