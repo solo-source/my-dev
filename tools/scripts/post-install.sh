@@ -11,7 +11,7 @@ sudo dnf groupinstall "Development Tools" -y
 sudo dnf install curl vim gnome-tweaks git -y
 
 #install Volta(volta.sh)
-curl https://get.volta.sh | bash -y
+curl https://get.volta.sh | bash
  
 
 #install node using volta from the absolute pack
