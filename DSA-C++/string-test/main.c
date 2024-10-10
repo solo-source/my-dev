@@ -3,7 +3,7 @@
 
 int main(){
     char s[] = "Samrendra";
-    int index;
+    int counter;
     /*
     * But C sees this character array(also called String) s[] = "Shatner" as s[] = "Shatner\0"
     * Here '\0' is the numm terminating character also known as sentinel character
@@ -34,8 +34,8 @@ int main(){
     printf("[%c]\n", s[6]);
     printf("[%c]\n", s[9]); // null character is defined as control character and thus its unprintable.
 
-    for(index = 0; index < sizeof(s); index++){
-        printf("%c\n", s[index]);
+    for(counter = 0; counter < sizeof(s); counter++){
+        printf("%c\n", s[counter]);
     }
 
 
@@ -63,7 +63,13 @@ int main(){
    //removing null terminating charcter form a C String(Character Array)
    s[9] = 'H';
    printf("The String arfter replacing the null character: [%s]\n", s);
-
+   /*
+   *
+   * After we insert a character at the position of the  null terminating character
+   * the null character '\0' shifts to the next memory location and at the place of null character the 
+   * character that we insert is added.
+   * Thus the total size of the array is increased by 1 or by the no of times a character is added to the array.
+   */
 
    //we can also uise the null terminating character to  shorten the string
    //or end the string at a certain position
