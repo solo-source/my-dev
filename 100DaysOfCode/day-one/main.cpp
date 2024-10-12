@@ -15,11 +15,11 @@ int main(){
          {
             cout << "Vowel" << endl;
          }
-    else if (inputCharacter >= 65 && inputCharacter <= 122)
+    else if ((inputCharacter >= 65 && inputCharacter <= 90) || (inputCharacter >= 97 && inputCharacter <= 122))
     {
         cout << "Consonant" << endl;
     }
-    else if (inputCharacter >= 48 && inputCharacter <= 57)
+    else
     {
         cout << "Invalid Input" << endl;
     }
